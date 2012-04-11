@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bockie</title>
+  <%= stylesheet_link_tag "bootstrap.css","font-awesome.css","bootstrap-responsive.css","custom.css"%>
+	<%= javascript_include_tag :all %>
+
+	<script src="/javascripts/bootstrap/bootstrap-transition.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-alert.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-modal.js"></script>
+
+	<script src="/javascripts/bootstrap/bootstrap-dropdown.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-scrollspy.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-tab.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-tooltip.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-popover.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-button.js"></script>
+
+	<script src="/javascripts/bootstrap/bootstrap-collapse.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-carousel.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap-typeahead.js"></script>
+
+	<!--<%= javascript_include_tag "application", :cache => true %>-->
+	<link rel="shortcut icon" href="/images/favicon.png" />
+
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<%= render "layouts/header" %>
+<div class="container">
+
+<%= yield %>
+<%= render "layouts/footer" %>
+</div>
+<%= debug(params) if Rails.env.development? %>
+<!--<script src="http://feedbackbar.com/javascripts/feedbackbar.js" type="text/javascript"></script>-->
+</body>
+</html>
+
